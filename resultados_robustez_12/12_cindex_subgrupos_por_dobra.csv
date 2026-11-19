@@ -1,0 +1,127 @@
+﻿dobra,modelo,estrato,grupo,n,eventos,censuras,c_index,avaliavel
+1,clinico,geral,todos,58,31,27,0.5636182902584493,True
+1,clinico,idade,<65 anos,29,14,15,0.6074766355140186,True
+1,clinico,idade,>=65 anos,29,17,12,0.5283687943262412,True
+1,clinico,estagio,I-II,57,30,27,0.5626943005181347,True
+1,clinico,estagio,III-IV,1,1,0,,False
+1,clinico,evento,0,27,0,27,,False
+1,clinico,evento,1,31,31,0,,False
+1,integrado,geral,todos,58,31,27,0.5526838966202783,True
+1,integrado,idade,<65 anos,29,14,15,0.5560747663551402,True
+1,integrado,idade,>=65 anos,29,17,12,0.5141843971631206,True
+1,integrado,estagio,I-II,57,30,27,0.5492227979274611,True
+1,integrado,estagio,III-IV,1,1,0,,False
+1,integrado,evento,0,27,0,27,,False
+1,integrado,evento,1,31,31,0,,False
+1,transcriptomico,geral,todos,58,31,27,0.5079522862823062,True
+1,transcriptomico,idade,<65 anos,29,14,15,0.48598130841121495,True
+1,transcriptomico,idade,>=65 anos,29,17,12,0.5141843971631206,True
+1,transcriptomico,estagio,I-II,57,30,27,0.5046632124352332,True
+1,transcriptomico,estagio,III-IV,1,1,0,,False
+1,transcriptomico,evento,0,27,0,27,,False
+1,transcriptomico,evento,1,31,31,0,,False
+2,clinico,geral,todos,57,31,26,0.5708582834331337,True
+2,clinico,idade,<65 anos,20,8,12,0.45098039215686275,True
+2,clinico,idade,>=65 anos,37,23,14,0.5405405405405406,True
+2,clinico,estagio,I-II,54,30,24,0.5864745011086474,True
+2,clinico,estagio,III-IV,3,1,2,,False
+2,clinico,evento,0,26,0,26,,False
+2,clinico,evento,1,31,31,0,,False
+2,integrado,geral,todos,57,31,26,0.5688622754491018,True
+2,integrado,idade,<65 anos,20,8,12,0.5,True
+2,integrado,idade,>=65 anos,37,23,14,0.5202702702702703,True
+2,integrado,estagio,I-II,54,30,24,0.5831485587583148,True
+2,integrado,estagio,III-IV,3,1,2,,False
+2,integrado,evento,0,26,0,26,,False
+2,integrado,evento,1,31,31,0,,False
+2,transcriptomico,geral,todos,57,31,26,0.47904191616766467,True
+2,transcriptomico,idade,<65 anos,20,8,12,0.5882352941176471,True
+2,transcriptomico,idade,>=65 anos,37,23,14,0.42792792792792794,True
+2,transcriptomico,estagio,I-II,54,30,24,0.4933481152993348,True
+2,transcriptomico,estagio,III-IV,3,1,2,,False
+2,transcriptomico,evento,0,26,0,26,,False
+2,transcriptomico,evento,1,31,31,0,,False
+3,clinico,geral,todos,57,31,26,0.5219665271966527,True
+3,clinico,idade,<65 anos,30,15,15,0.5202952029520295,True
+3,clinico,idade,>=65 anos,27,16,11,0.541871921182266,True
+3,clinico,estagio,I-II,54,30,24,0.5205949656750573,True
+3,clinico,estagio,III-IV,3,1,2,,False
+3,clinico,evento,0,26,0,26,,False
+3,clinico,evento,1,31,31,0,,False
+3,integrado,geral,todos,57,31,26,0.5313807531380753,True
+3,integrado,idade,<65 anos,30,15,15,0.4944649446494465,True
+3,integrado,idade,>=65 anos,27,16,11,0.5221674876847291,True
+3,integrado,estagio,I-II,54,30,24,0.5297482837528604,True
+3,integrado,estagio,III-IV,3,1,2,,False
+3,integrado,evento,0,26,0,26,,False
+3,integrado,evento,1,31,31,0,,False
+3,transcriptomico,geral,todos,57,31,26,0.48640167364016734,True
+3,transcriptomico,idade,<65 anos,30,15,15,0.4981549815498155,True
+3,transcriptomico,idade,>=65 anos,27,16,11,0.5073891625615764,True
+3,transcriptomico,estagio,I-II,54,30,24,0.5045766590389016,True
+3,transcriptomico,estagio,III-IV,3,1,2,,False
+3,transcriptomico,evento,0,26,0,26,,False
+3,transcriptomico,evento,1,31,31,0,,False
+4,clinico,geral,todos,58,31,27,0.5862068965517241,True
+4,clinico,idade,<65 anos,31,16,15,0.6006493506493507,True
+4,clinico,idade,>=65 anos,27,15,12,0.5404255319148936,True
+4,clinico,estagio,I-II,57,31,26,0.6009302325581395,True
+4,clinico,estagio,III-IV,1,0,1,,False
+4,clinico,evento,0,27,0,27,,False
+4,clinico,evento,1,31,31,0,,False
+4,integrado,geral,todos,58,31,27,0.5753176043557169,True
+4,integrado,idade,<65 anos,31,16,15,0.6525974025974026,True
+4,integrado,idade,>=65 anos,27,15,12,0.451063829787234,True
+4,integrado,estagio,I-II,57,31,26,0.5897674418604651,True
+4,integrado,estagio,III-IV,1,0,1,,False
+4,integrado,evento,0,27,0,27,,False
+4,integrado,evento,1,31,31,0,,False
+4,transcriptomico,geral,todos,58,31,27,0.4337568058076225,True
+4,transcriptomico,idade,<65 anos,31,16,15,0.4967532467532468,True
+4,transcriptomico,idade,>=65 anos,27,15,12,0.4,True
+4,transcriptomico,estagio,I-II,57,31,26,0.4418604651162791,True
+4,transcriptomico,estagio,III-IV,1,0,1,,False
+4,transcriptomico,evento,0,27,0,27,,False
+4,transcriptomico,evento,1,31,31,0,,False
+5,clinico,geral,todos,57,31,26,0.5692137320044297,True
+5,clinico,idade,<65 anos,24,10,14,0.5378787878787878,True
+5,clinico,idade,>=65 anos,33,21,12,0.5075987841945289,True
+5,clinico,estagio,I-II,53,30,23,0.609181141439206,True
+5,clinico,estagio,III-IV,4,1,3,,False
+5,clinico,evento,0,26,0,26,,False
+5,clinico,evento,1,31,31,0,,False
+5,integrado,geral,todos,57,31,26,0.5105204872646734,True
+5,integrado,idade,<65 anos,24,10,14,0.4696969696969697,True
+5,integrado,idade,>=65 anos,33,21,12,0.48024316109422494,True
+5,integrado,estagio,I-II,53,30,23,0.5446650124069479,True
+5,integrado,estagio,III-IV,4,1,3,,False
+5,integrado,evento,0,26,0,26,,False
+5,integrado,evento,1,31,31,0,,False
+5,transcriptomico,geral,todos,57,31,26,0.4850498338870432,True
+5,transcriptomico,idade,<65 anos,24,10,14,0.4393939393939394,True
+5,transcriptomico,idade,>=65 anos,33,21,12,0.47720364741641336,True
+5,transcriptomico,estagio,I-II,53,30,23,0.5099255583126551,True
+5,transcriptomico,estagio,III-IV,4,1,3,,False
+5,transcriptomico,evento,0,26,0,26,,False
+5,transcriptomico,evento,1,31,31,0,,False
+6,clinico,geral,todos,57,31,26,0.49333333333333335,True
+6,clinico,idade,<65 anos,24,11,13,0.477124183006536,True
+6,clinico,idade,>=65 anos,33,20,13,0.5258620689655172,True
+6,clinico,estagio,I-II,55,29,26,0.5062287655719139,True
+6,clinico,estagio,III-IV,2,2,0,,False
+6,clinico,evento,0,26,0,26,,False
+6,clinico,evento,1,31,31,0,,False
+6,integrado,geral,todos,57,31,26,0.49128205128205127,True
+6,integrado,idade,<65 anos,24,11,13,0.5163398692810458,True
+6,integrado,idade,>=65 anos,33,20,13,0.47413793103448276,True
+6,integrado,estagio,I-II,55,29,26,0.5028312570781427,True
+6,integrado,estagio,III-IV,2,2,0,,False
+6,integrado,evento,0,26,0,26,,False
+6,integrado,evento,1,31,31,0,,False
+6,transcriptomico,geral,todos,57,31,26,0.5241025641025641,True
+6,transcriptomico,idade,<65 anos,24,11,13,0.5816993464052288,True
+6,transcriptomico,idade,>=65 anos,33,20,13,0.4942528735632184,True
+6,transcriptomico,estagio,I-II,55,29,26,0.5300113250283126,True
+6,transcriptomico,estagio,III-IV,2,2,0,,False
+6,transcriptomico,evento,0,26,0,26,,False
+6,transcriptomico,evento,1,31,31,0,,False

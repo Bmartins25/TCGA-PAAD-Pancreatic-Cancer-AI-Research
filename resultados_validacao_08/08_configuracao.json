@@ -1,0 +1,26 @@
+{
+  "semente": 2027,
+  "dobras": 5,
+  "repeticoes": 3,
+  "horizontes_dias": [
+    365,
+    730,
+    1095
+  ],
+  "modelos": {
+    "Cox tradicional": [
+      0.0,
+      0.0
+    ],
+    "Cox ridge (0.1)": [
+      0.1,
+      0.0
+    ],
+    "Cox elastic net (0.1)": [
+      0.1,
+      0.5
+    ]
+  },
+  "censura": "KM ajustada somente no treino para IPCW",
+  "calibracao": "KM por 2 grupos em cada dobra; exploratoria"
+}

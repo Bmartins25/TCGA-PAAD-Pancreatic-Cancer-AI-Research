@@ -1,0 +1,124 @@
+{
+  "etapa": "13",
+  "status": "auditoria documental executada",
+  "data_utc": "2026-11-19T00:18:33.211904+00:00",
+  "origem": "C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_robustez_12",
+  "arquivos_inventariados": 12,
+  "pacientes_distintos_etapa12": 172,
+  "dobras_etapa12": 6,
+  "cindex_medio": {
+    "clinico": 0.5508661771296205,
+    "integrado": 0.5383411780183162,
+    "transcriptomico": 0.4860508466478947
+  },
+  "comparacoes_etapa12": [
+    {
+      "comparacao": "integrado - clinico",
+      "n_dobras": 6,
+      "delta_medio": -0.012524999111304327,
+      "delta_mediano": -0.006470287123644641,
+      "delta_dp_descritivo": 0.023826877539529914,
+      "dobras_positivas": 1,
+      "dobras_negativas": 5
+    },
+    {
+      "comparacao": "integrado - transcriptomico",
+      "n_dobras": 6,
+      "delta_medio": 0.0522903313704215,
+      "delta_mediano": 0.04485534491794005,
+      "delta_dp_descritivo": 0.05907869141956654,
+      "dobras_positivas": 5,
+      "dobras_negativas": 1
+    },
+    {
+      "comparacao": "transcriptomico - clinico",
+      "n_dobras": 6,
+      "delta_medio": -0.06481533048172583,
+      "delta_mediano": -0.06991495104676484,
+      "delta_dp_descritivo": 0.061414954512057585,
+      "dobras_positivas": 1,
+      "dobras_negativas": 5
+    }
+  ],
+  "verificacoes": [
+    {
+      "verificacao": "Etapa 12 concluída",
+      "resultado": "OK",
+      "detalhe": "concluida (auditoria descritiva)"
+    },
+    {
+      "verificacao": "Três modelos documentados",
+      "resultado": "OK",
+      "detalhe": "['clinico', 'integrado', 'transcriptomico']"
+    },
+    {
+      "verificacao": "172 pacientes distintos",
+      "resultado": "OK",
+      "detalhe": "172"
+    },
+    {
+      "verificacao": "6 dobras registradas",
+      "resultado": "OK",
+      "detalhe": "6"
+    },
+    {
+      "verificacao": "Três comparações pareadas",
+      "resultado": "OK",
+      "detalhe": "['integrado - clinico', 'integrado - transcriptomico', 'transcriptomico - clinico']"
+    },
+    {
+      "verificacao": "Dobras comparadas: integrado - clinico",
+      "resultado": "OK",
+      "detalhe": "6"
+    },
+    {
+      "verificacao": "Sinais das diferenças: integrado - clinico",
+      "resultado": "OK",
+      "detalhe": "(1, 5)"
+    },
+    {
+      "verificacao": "Dobras comparadas: integrado - transcriptomico",
+      "resultado": "OK",
+      "detalhe": "6"
+    },
+    {
+      "verificacao": "Sinais das diferenças: integrado - transcriptomico",
+      "resultado": "OK",
+      "detalhe": "(5, 1)"
+    },
+    {
+      "verificacao": "Dobras comparadas: transcriptomico - clinico",
+      "resultado": "OK",
+      "detalhe": "6"
+    },
+    {
+      "verificacao": "Sinais das diferenças: transcriptomico - clinico",
+      "resultado": "OK",
+      "detalhe": "(1, 5)"
+    },
+    {
+      "verificacao": "18 linhas de diferenças por dobra",
+      "resultado": "OK",
+      "detalhe": "18"
+    },
+    {
+      "verificacao": "C-index dos três modelos recuperado",
+      "resultado": "OK",
+      "detalhe": "{'clinico': 0.5508661771296205, 'integrado': 0.5383411780183162, 'transcriptomico': 0.4860508466478947}"
+    },
+    {
+      "verificacao": "Diferenças concordam com C-index (tolerância 0,0001)",
+      "resultado": "OK",
+      "detalhe": "comparação entre resumos das etapas 12"
+    }
+  ],
+  "alertas": [],
+  "limites": [
+    "Etapa 13 não reexecuta modelos nem audita o código-fonte de cada etapa.",
+    "Os arquivos 09b/09c/09d/10/10b podem ter nomes diferentes dos esperados; ausência no inventário não comprova ausência de resultados.",
+    "Dobras repetidas não são observações independentes; DP descritivo não é intervalo de confiança.",
+    "Sem validação externa, inferência causal, benefício clínico ou superioridade estatística demonstrados.",
+    "A ausência de controle de lote, temporalidade e pureza tumoral limita a interpretação biológica.",
+    "Amostra e resultados são específicos da coorte disponível."
+  ]
+}

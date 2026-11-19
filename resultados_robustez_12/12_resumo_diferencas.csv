@@ -1,0 +1,4 @@
+﻿comparacao,n_dobras,delta_medio,delta_mediano,delta_dp_descritivo,dobras_positivas,dobras_negativas
+integrado - clinico,6,-0.012524999111304327,-0.006470287123644641,0.023826877539529914,1,5
+integrado - transcriptomico,6,0.0522903313704215,0.04485534491794005,0.05907869141956654,5,1
+transcriptomico - clinico,6,-0.06481533048172583,-0.06991495104676484,0.061414954512057585,1,5

@@ -1,0 +1,39 @@
+ETAPA 13 | CONSOLIDAÇÃO CIENTÍFICA E AUDITORIA DOCUMENTAL | TCGA-PAAD
+
+OBJETIVO
+Consolidar evidências existentes sem refazer ajuste, otimização ou validação externa.
+
+COORTE E ESTRATÉGIA
+Pacientes distintos nas predições da etapa 12: 172.
+Dobras de avaliação: 6 (repetições dependentes).
+
+DISCRIMINAÇÃO (C-INDEX MÉDIO DESCRITIVO)
+clinico: 0,5509
+integrado: 0,5383
+transcriptomico: 0,4861
+
+COMPARAÇÕES PAREADAS (DESCRITIVAS)
+integrado - clinico: delta médio -0,0125; positivas 1/6; negativas 5/6.
+integrado - transcriptomico: delta médio 0,0523; positivas 5/6; negativas 1/6.
+transcriptomico - clinico: delta médio -0,0648; positivas 1/6; negativas 5/6.
+
+INTERPRETAÇÃO
+Na configuração avaliada, a integração transcriptômica não melhorou o C-index médio em relação ao modelo clínico.
+A diferença observada é descritiva, não evidência de inferioridade ou superioridade estatística.
+
+LIMITAÇÕES E CONDUTAS
+- Etapa 13 não reexecuta modelos nem audita o código-fonte de cada etapa.
+- Os arquivos 09b/09c/09d/10/10b podem ter nomes diferentes dos esperados; ausência no inventário não comprova ausência de resultados.
+- Dobras repetidas não são observações independentes; DP descritivo não é intervalo de confiança.
+- Sem validação externa, inferência causal, benefício clínico ou superioridade estatística demonstrados.
+- A ausência de controle de lote, temporalidade e pureza tumoral limita a interpretação biológica.
+- Amostra e resultados são específicos da coorte disponível.
+
+PENDÊNCIAS DE AUDITORIA
+- Nenhuma inconsistência encontrada nas verificações automáticas implementadas.
+
+PRÓXIMOS PASSOS CIENTÍFICOS
+Revisar temporalidade e definição do desfecho, qualidade biológica, efeitos de lote e possível viés de seleção.
+Realizar validação externa independente quando houver dados compatíveis.
+Para inferência de desempenho, definir protocolo estatístico adequado a dependência entre repetições e pacientes.
+Considerar calibração e utilidade clínica em validação prospectivamente especificada.

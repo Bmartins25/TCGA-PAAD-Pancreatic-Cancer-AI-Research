@@ -1,0 +1,15 @@
+﻿verificacao,resultado,detalhe
+Etapa 12 concluída,OK,concluida (auditoria descritiva)
+Três modelos documentados,OK,"['clinico', 'integrado', 'transcriptomico']"
+172 pacientes distintos,OK,172
+6 dobras registradas,OK,6
+Três comparações pareadas,OK,"['integrado - clinico', 'integrado - transcriptomico', 'transcriptomico - clinico']"
+Dobras comparadas: integrado - clinico,OK,6
+Sinais das diferenças: integrado - clinico,OK,"(1, 5)"
+Dobras comparadas: integrado - transcriptomico,OK,6
+Sinais das diferenças: integrado - transcriptomico,OK,"(5, 1)"
+Dobras comparadas: transcriptomico - clinico,OK,6
+Sinais das diferenças: transcriptomico - clinico,OK,"(1, 5)"
+18 linhas de diferenças por dobra,OK,18
+C-index dos três modelos recuperado,OK,"{'clinico': 0.5508661771296205, 'integrado': 0.5383411780183162, 'transcriptomico': 0.4860508466478947}"
+"Diferenças concordam com C-index (tolerância 0,0001)",OK,comparação entre resumos das etapas 12

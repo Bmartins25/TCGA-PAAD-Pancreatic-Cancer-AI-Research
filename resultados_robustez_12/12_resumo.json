@@ -1,0 +1,52 @@
+{
+  "etapa": "12",
+  "status": "concluida (auditoria descritiva)",
+  "observacoes_predicao": 1032,
+  "pacientes_distintos": 172,
+  "dobras": 6,
+  "modelos": [
+    "clinico",
+    "integrado",
+    "transcriptomico"
+  ],
+  "dobras_subgrupos_avaliaveis": 72,
+  "dobras_subgrupos_nao_avaliaveis": 54,
+  "comparacoes": [
+    {
+      "comparacao": "integrado - clinico",
+      "n_dobras": 6,
+      "delta_medio": -0.012524999111304327,
+      "delta_mediano": -0.006470287123644641,
+      "delta_dp_descritivo": 0.023826877539529914,
+      "dobras_positivas": 1,
+      "dobras_negativas": 5
+    },
+    {
+      "comparacao": "integrado - transcriptomico",
+      "n_dobras": 6,
+      "delta_medio": 0.0522903313704215,
+      "delta_mediano": 0.04485534491794005,
+      "delta_dp_descritivo": 0.05907869141956654,
+      "dobras_positivas": 5,
+      "dobras_negativas": 1
+    },
+    {
+      "comparacao": "transcriptomico - clinico",
+      "n_dobras": 6,
+      "delta_medio": -0.06481533048172583,
+      "delta_mediano": -0.06991495104676484,
+      "delta_dp_descritivo": 0.061414954512057585,
+      "dobras_positivas": 1,
+      "dobras_negativas": 5
+    }
+  ],
+  "avisos": [
+    "Predicoes da etapa 10 reutilizadas; nenhum modelo foi reajustado.",
+    "Dobras repetidas compartilham pacientes; DP nao e IC nem teste de significancia.",
+    "Subgrupos pequenos podem ser nao avaliaveis; estadio III-IV e potencialmente escasso.",
+    "Analise de influencia remove observacoes APENAS do teste, nao e influencia no ajuste.",
+    "Nao ha avaliacao de lote, pureza tumoral, temporalidade ou validacao externa.",
+    "C-index para evento isolado nao e calculavel; estrato por evento pode ser NA.",
+    "Resultados nao demonstram beneficio clinico, causalidade ou superioridade estatistica."
+  ]
+}

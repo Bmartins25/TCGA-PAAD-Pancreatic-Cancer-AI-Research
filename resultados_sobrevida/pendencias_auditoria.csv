@@ -1,0 +1,7 @@
+﻿cases.submitter_id,alertas_auditoria,tempo_sobrevida_dias,evento_obito
+TCGA-2J-AABT,estagio_atipico_revisar_gdc,319.0,0
+TCGA-3A-A9I5,estagio_ausente,1794.0,0
+TCGA-3A-A9IL,estagio_atipico_revisar_gdc,2741.0,0
+TCGA-3A-A9IO,estagio_ausente,1942.0,0
+TCGA-HZ-A8P0,tempo_sobrevida_zero,0.0,0
+TCGA-YH-A8SY,estagio_ausente,388.0,0

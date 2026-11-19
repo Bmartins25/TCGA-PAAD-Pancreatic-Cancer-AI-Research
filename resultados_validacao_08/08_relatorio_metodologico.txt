@@ -1,0 +1,25 @@
+ETAPA 08 | TCGA-PAAD | RELATORIO METODOLOGICO
+Original: 185 | elegiveis: 179 | eventos: 100
+Mesmo preparo, variaveis e divisao de CV da etapa 07 (seed 2027).
+AUC(t): cumulativa/dinamica com pesos IPCW para casos.
+Brier(t): pesos IPCW de Kaplan-Meier da censura estimada NO TREINO.
+Predicao de sobrevivencia: CoxPHFitter.predict_survival_function.
+Calibracao: 2 grupos por dobra, observado por Kaplan-Meier; exploratoria.
+Horizontes sem suporte ou pesos instaveis retornam NaN, nao sao imputados.
+Hiperparametros predefinidos; sem selecao aninhada ou validacao externa.
+Desvios-padrao entre dobras repetidas nao representam IC independentes.
+Nao calculado IBS integrado, calibracao suavizada ou IC bootstrap.
+Verificar origem temporal, censura, estadios 0/0a e vies de selecao.
+Sem conclusoes clinicas ou de superioridade estatistica.
+Falhas de ajuste: 0
+
+               modelo  horizonte_dias  n_dobras  n_auc  auc_media  auc_dp  n_brier  brier_medio  brier_dp
+      Cox tradicional             365        15     15     0.5115  0.0841       15       0.1936    0.0230
+      Cox tradicional             730        15     12     0.6438  0.1093       12       0.2456    0.0573
+      Cox tradicional            1095        15      6     0.6133  0.1752        6       0.2972    0.0576
+      Cox ridge (0.1)             365        15     15     0.5182  0.0831       15       0.1918    0.0223
+      Cox ridge (0.1)             730        15     12     0.6375  0.1108       12       0.2475    0.0577
+      Cox ridge (0.1)            1095        15      6     0.6097  0.1792        6       0.2992    0.0543
+Cox elastic net (0.1)             365        15     15     0.5551  0.0786       15       0.1900    0.0213
+Cox elastic net (0.1)             730        15     12     0.6208  0.0984       12       0.2553    0.0589
+Cox elastic net (0.1)            1095        15      6     0.5988  0.1584        6       0.3059    0.0478

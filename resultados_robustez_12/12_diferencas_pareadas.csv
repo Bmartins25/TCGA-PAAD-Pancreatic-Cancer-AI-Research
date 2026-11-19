@@ -1,0 +1,19 @@
+﻿dobra,comparacao,delta_c_index
+1,integrado - clinico,-0.010934393638171058
+2,integrado - clinico,-0.001996007984031878
+3,integrado - clinico,0.009414225941422605
+4,integrado - clinico,-0.010889292196007205
+5,integrado - clinico,-0.058693244739756345
+6,integrado - clinico,-0.0020512820512820773
+1,transcriptomico - clinico,-0.055666003976143186
+2,transcriptomico - clinico,-0.09181636726546905
+3,transcriptomico - clinico,-0.035564853556485365
+4,transcriptomico - clinico,-0.1524500907441016
+5,transcriptomico - clinico,-0.0841638981173865
+6,transcriptomico - clinico,0.030769230769230715
+1,integrado - transcriptomico,0.04473161033797213
+2,integrado - transcriptomico,0.08982035928143717
+3,integrado - transcriptomico,0.04497907949790797
+4,integrado - transcriptomico,0.1415607985480944
+5,integrado - transcriptomico,0.02547065337763016
+6,integrado - transcriptomico,-0.03282051282051279

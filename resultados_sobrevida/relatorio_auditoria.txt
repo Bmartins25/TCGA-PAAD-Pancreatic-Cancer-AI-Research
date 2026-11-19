@@ -1,0 +1,17 @@
+PILOTO TCGA-PAAD — AUDITORIA E SOBREVIDA EXPLORATÓRIA
+Arquivo: pacientes_tcga_paad_exploratorio.csv
+Pacientes únicos: 185
+Óbitos: 100
+Vivos: 85
+Elegíveis KM (tempo > 0): 184
+Não elegíveis KM: 1
+Registros com algum alerta: 6
+Mediana KM (dias): 607.0
+
+REGRAS: falecido -> days_to_death, evento=1; vivo -> days_to_last_follow_up, evento=0.
+Tempos zero/negativos/ausentes não entram na curva principal; permanecem auditados.
+Campos condicionais ausentes não são automaticamente imputados.
+Estágios 0/0a requerem revisão da codificação original.
+A data de origem dos tempos e o alinhamento entre arquivos GDC devem ser verificados.
+Curva descritiva sem ajuste de confundidores; não representa validação de IA.
+Sem intervalos de confiança ou inferência causal nesta versão.

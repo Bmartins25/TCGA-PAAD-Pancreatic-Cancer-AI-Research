@@ -1,0 +1,22 @@
+﻿modelo,estrato,grupo,n_dobras,c_index_medio,c_index_dp_descritivo,n_mediano,eventos_medianos
+clinico,estagio,I-II,6,0.5643506511451831,0.0427381807392593,54.5,30.0
+clinico,estagio,III-IV,0,,,2.5,1.0
+clinico,evento,0,0,,,26.0,0.0
+clinico,evento,1,0,,,31.0,31.0
+clinico,geral,todos,6,0.5508661771296205,0.03547708501101371,57.0,31.0
+clinico,idade,<65 anos,6,0.5324007586929309,0.06349108090830968,26.5,12.5
+clinico,idade,>=65 anos,6,0.5307779401873313,0.013256725480316171,31.0,18.5
+integrado,estagio,I-II,6,0.5498972252973654,0.03269342887952997,54.5,30.0
+integrado,estagio,III-IV,0,,,2.5,1.0
+integrado,evento,0,0,,,26.0,0.0
+integrado,evento,1,0,,,31.0,31.0
+integrado,geral,todos,6,0.5383411780183162,0.03329116047140124,57.0,31.0
+integrado,idade,<65 anos,6,0.5315289920966675,0.06585102042773332,26.5,12.5
+integrado,idade,>=65 anos,6,0.4936778461723436,0.029385672582600476,31.0,18.5
+transcriptomico,estagio,I-II,6,0.497397555871786,0.029751317583834525,54.5,30.0
+transcriptomico,estagio,III-IV,0,,,2.5,1.0
+transcriptomico,evento,0,0,,,26.0,0.0
+transcriptomico,evento,1,0,,,31.0,31.0
+transcriptomico,geral,todos,6,0.4860508466478947,0.03070023836818342,57.0,31.0
+transcriptomico,idade,<65 anos,6,0.5150363527718488,0.05828767056379271,26.5,12.5
+transcriptomico,idade,>=65 anos,6,0.4701596681053761,0.04617404276628201,31.0,18.5
