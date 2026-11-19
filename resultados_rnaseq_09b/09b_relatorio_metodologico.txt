@@ -1,0 +1,19 @@
+ETAPA 09B | TCGA-PAAD | PROCESSAMENTO RNA-SEQ
+etapa: 09B
+arquivos_selecionados: 178
+arquivos_validos: 178
+arquivos_nao_baixados: 0
+arquivos_com_erro: 0
+pacientes_com_matriz: 178
+genes_na_matriz: 60616
+contagem: STAR unstranded bruta; sem normalização
+limite_teste: 0
+status: matriz disponível; QC biológico pendente
+
+Identificação paciente-arquivo proveniente da etapa 09 (metadados GDC).
+Amostras Primary Tumor; pacientes com múltiplos arquivos/amostras não são agregados.
+Validação de tamanho e MD5 contra manifesto; contagens STAR unstranded inteiras.
+Gene IDs preservados, inclusive versões ENSG. Não foram aplicados filtros ou normalização.
+Verificar alinhamento amostra-aliquota, versões de anotação, qualidade biológica e efeitos de lote.
+Matriz não é entrada pronta para modelagem; evitar vazamento entre treino e teste.
+Amostras ausentes/erro não são imputadas. Sem download automático por padrão.

@@ -1,0 +1,33 @@
+ETAPA 09C | TCGA-PAAD | CONTROLE DE QUALIDADE E NORMALIZAÇÃO EXPLORATÓRIA
+
+etapa: 09C
+status: QC exploratório concluído; revisão biológica pendente
+entrada: C:\Users\Bruno Bartolomeu\Desktop\Piloto Fiocruz - TCGA-PAAD\resultados_rnaseq_09b\09b_matriz_contagens_brutas.csv.gz
+pacientes: 178
+genes_originais: 60616
+genes_mantidos: 18551
+genes_removidos: 42065
+cpm_min: 1.0
+fracao_min: 0.1
+amostras_minimas: 18
+amostras_com_alerta_iqr: 14
+genes_utilizados_pca: 2000
+variancia_pc1_percentual: 18.749
+variancia_pc2_percentual: 14.593
+mapeamento_09b: {'arquivo_encontrado': True, 'pacientes_iguais': True, 'diferencas': []}
+normalizacao: CPM e log2(CPM+1), exploratória; sem ajuste de tamanho/composição por TMM/DESeq2
+efeitos_lote: não avaliados: requer metadados técnicos
+amostras_excluidas_automaticamente: 0
+validacao_preditiva: não realizada; refazer seleção e transformações dentro de cada dobra de treino
+
+LIMITAÇÕES E CONDUTAS OBRIGATÓRIAS:
+1. Dados: contagens STAR unstranded; verificar strandedness, anotação GENCODE e versões ENSG.
+2. CPM usa soma de contagens de cada biblioteca; log2(CPM+1) é exploratório.
+3. Filtro: CPM >= limiar em >= fração de amostras; não constitui seleção para inferência clínica.
+4. Alertas IQR são triagem, não autorizam exclusão automática.
+5. PCA e seleção de genes mais variáveis foram ajustadas na coorte completa APENAS para QC.
+6. Antes de modelagem, dividir por paciente e ajustar filtragem, escala e PCA só no treino de cada dobra.
+7. Não foi realizada correção de lote; requer metadados de centro, placa, workflow e/ou processamento.
+8. Para expressão diferencial, usar métodos próprios para contagens (DESeq2/edgeR) e desenho apropriado.
+9. Conferir composição celular, pureza tumoral, amostra/alíquota, dados clínicos e potenciais confundidores.
+10. Não foram realizadas validação externa, avaliação clínica ou inferência causal.

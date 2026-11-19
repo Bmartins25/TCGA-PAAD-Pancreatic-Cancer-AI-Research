@@ -1,0 +1,25 @@
+{
+  "etapa": "09C",
+  "status": "QC exploratório concluído; revisão biológica pendente",
+  "entrada": "C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_rnaseq_09b\\09b_matriz_contagens_brutas.csv.gz",
+  "pacientes": 178,
+  "genes_originais": 60616,
+  "genes_mantidos": 18551,
+  "genes_removidos": 42065,
+  "cpm_min": 1.0,
+  "fracao_min": 0.1,
+  "amostras_minimas": 18,
+  "amostras_com_alerta_iqr": 14,
+  "genes_utilizados_pca": 2000,
+  "variancia_pc1_percentual": 18.749,
+  "variancia_pc2_percentual": 14.593,
+  "mapeamento_09b": {
+    "arquivo_encontrado": true,
+    "pacientes_iguais": true,
+    "diferencas": []
+  },
+  "normalizacao": "CPM e log2(CPM+1), exploratória; sem ajuste de tamanho/composição por TMM/DESeq2",
+  "efeitos_lote": "não avaliados: requer metadados técnicos",
+  "amostras_excluidas_automaticamente": 0,
+  "validacao_preditiva": "não realizada; refazer seleção e transformações dentro de cada dobra de treino"
+}

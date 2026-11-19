@@ -1,0 +1,65 @@
+{
+  "etapa": "14",
+  "data_geracao": "2026-11-18T21:35:48.159083-03:00",
+  "projeto": "TCGA-PAAD",
+  "natureza": "relatorio documental exploratorio",
+  "diretorio": "C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD",
+  "fontes_json": {
+    "09b": "resultados_rnaseq_09b\\09b_resumo.json",
+    "09c": "resultados_rnaseq_09c\\09c_resumo.json",
+    "09d": "resultados_integracao_09d\\09d_resumo.json",
+    "10": null,
+    "11": "resultados_interpretabilidade_11\\11_resumo.json",
+    "12": "resultados_robustez_12\\12_resumo.json",
+    "13": null
+  },
+  "metricas_verificadas": [
+    {
+      "modelo": "clinico",
+      "c_index_medio": null,
+      "fonte": "Não verificada"
+    },
+    {
+      "modelo": "integrado",
+      "c_index_medio": null,
+      "fonte": "Não verificada"
+    },
+    {
+      "modelo": "transcriptomico",
+      "c_index_medio": null,
+      "fonte": "Não verificada"
+    }
+  ],
+  "contagens_verificadas": [
+    {
+      "etapa": "09d",
+      "indicador": "pacientes_clinicos/pacientes_clinica",
+      "valor": 185
+    },
+    {
+      "etapa": "09b",
+      "indicador": "pacientes_com_matriz/pacientes_com_rna_tumor_primario",
+      "valor": 178
+    },
+    {
+      "etapa": "09d",
+      "indicador": "pacientes_pareados_desfecho_valido/pacientes_pareados",
+      "valor": 177
+    },
+    {
+      "etapa": "11",
+      "indicador": "pacientes_elegiveis",
+      "valor": 172
+    }
+  ],
+  "arquivos_inventariados": 83,
+  "alertas": [
+    "Resumo JSON não identificado para etapa 10; dados não serão presumidos.",
+    "Resumo JSON da etapa 13 não localizado por nome conhecido; confira o conteúdo da pasta.",
+    "C-index clinico: não extraído de resumo JSON conhecido; valor do terminal não foi adotado automaticamente.",
+    "C-index integrado: não extraído de resumo JSON conhecido; valor do terminal não foi adotado automaticamente.",
+    "C-index transcriptomico: não extraído de resumo JSON conhecido; valor do terminal não foi adotado automaticamente."
+  ],
+  "validacao_externa": false,
+  "auditoria_sha256_global": false
+}
