@@ -1,0 +1,93 @@
+{
+  "etapa": "10B",
+  "status": "análise descritiva concluída",
+  "n_dobras_dependentes": 6,
+  "configuracao_etapa10": {
+    "pacientes_elegiveis": 172,
+    "eventos": 93,
+    "censuras": 79,
+    "genes_brutos": 60616,
+    "modelos": [
+      "clinico",
+      "transcriptomico",
+      "integrado"
+    ],
+    "dobras": 3,
+    "repeticoes": 2,
+    "max_genes_por_dobra": 20,
+    "penalizacao": 1.0,
+    "min_cpm": 1.0,
+    "fracao_minima": 0.2,
+    "seed": 2027,
+    "falhas": 0
+  },
+  "resumo_modelos": [
+    {
+      "modelo": "clinico",
+      "n_dobras": 6,
+      "media": 0.5508661771296205,
+      "dp": 0.0354770850110137,
+      "mediana": 0.5664160111314396,
+      "minimo": 0.4933333333333333,
+      "maximo": 0.5862068965517241
+    },
+    {
+      "modelo": "integrado",
+      "n_dobras": 6,
+      "media": 0.5383411780183162,
+      "dp": 0.03329116047140126,
+      "mediana": 0.5420323248791767,
+      "minimo": 0.4912820512820512,
+      "maximo": 0.5753176043557169
+    },
+    {
+      "modelo": "transcriptomico",
+      "n_dobras": 6,
+      "media": 0.4860508466478946,
+      "dp": 0.03070023836818342,
+      "mediana": 0.4857257537636053,
+      "minimo": 0.4337568058076225,
+      "maximo": 0.5241025641025641
+    }
+  ],
+  "comparacoes": [
+    {
+      "comparacao": "integrado - clinico",
+      "n_dobras_dependentes": 6,
+      "delta_medio_descritivo": -0.012524999111304327,
+      "delta_mediano": -0.006470287123644641,
+      "delta_dp_descritivo": 0.023826877539529914,
+      "dobras_delta_positivo": 1,
+      "dobras_delta_negativo": 5,
+      "dobras_delta_zero": 0
+    },
+    {
+      "comparacao": "transcriptomico - clinico",
+      "n_dobras_dependentes": 6,
+      "delta_medio_descritivo": -0.06481533048172584,
+      "delta_mediano": -0.06991495104676484,
+      "delta_dp_descritivo": 0.0614149545120576,
+      "dobras_delta_positivo": 1,
+      "dobras_delta_negativo": 5,
+      "dobras_delta_zero": 0
+    },
+    {
+      "comparacao": "integrado - transcriptomico",
+      "n_dobras_dependentes": 6,
+      "delta_medio_descritivo": 0.052290331370421515,
+      "delta_mediano": 0.044855344917940076,
+      "delta_dp_descritivo": 0.05907869141956656,
+      "dobras_delta_positivo": 5,
+      "dobras_delta_negativo": 1,
+      "dobras_delta_zero": 0
+    }
+  ],
+  "estabilidade_genes": {
+    "disponivel": true,
+    "genes_distintos": 22,
+    "genes_presentes_em_todas_dobras": 18,
+    "jaccard_medio_descritivo": 0.9393939393939394,
+    "max_genes_por_dobra_observado": 20
+  },
+  "alerta": "Dobras repetidas compartilham pacientes: DP não é IC; não realizar testes ingênuos nem declarar superioridade estatística."
+}

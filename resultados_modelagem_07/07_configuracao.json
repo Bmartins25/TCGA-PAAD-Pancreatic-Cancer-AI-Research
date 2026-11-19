@@ -1,0 +1,16 @@
+{
+  "semente": 2027,
+  "n_splits": 5,
+  "n_repeticoes": 3,
+  "rsf_disponivel": false,
+  "covariaveis": [
+    "idade_10anos",
+    "estagio_II",
+    "estagio_III_IV"
+  ],
+  "modelos": [
+    "Cox tradicional",
+    "Cox ridge (0.1)",
+    "Cox elastic net (0.1)"
+  ]
+}

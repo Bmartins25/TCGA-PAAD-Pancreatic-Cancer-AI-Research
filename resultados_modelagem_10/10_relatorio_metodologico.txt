@@ -1,0 +1,37 @@
+ETAPA 10 | TCGA-PAAD | COMPARAÇÃO EXPLORATÓRIA
+
+{
+  "pacientes_elegiveis": 172,
+  "eventos": 93,
+  "censuras": 79,
+  "genes_brutos": 60616,
+  "modelos": [
+    "clinico",
+    "transcriptomico",
+    "integrado"
+  ],
+  "dobras": 3,
+  "repeticoes": 2,
+  "max_genes_por_dobra": 20,
+  "penalizacao": 1.0,
+  "min_cpm": 1.0,
+  "fracao_minima": 0.2,
+  "seed": 2027,
+  "falhas": 0
+}
+
+RESULTADOS
+         modelo  n_dobras  c_index_medio  c_index_dp  c_index_mediana
+        clinico         6       0.550866    0.035477         0.566416
+      integrado         6       0.538341    0.033291         0.542032
+transcriptomico         6       0.486051    0.030700         0.485726
+
+LIMITAÇÕES
+AUC(t), Brier(t) e calibração não calculados nesta versão; ver etapa 08.
+Validação cruzada repetida NÃO equivale a validação externa nem fornece IC independentes.
+Filtros de expressão, seleção por variância e escala são ajustados dentro de cada treino.
+CPM é exploratório; não substitui normalização apropriada para análise diferencial.
+Idade convertida de dias para anos; estágios ausentes/exóticos excluídos.
+Não há ajuste por lote, verificação de origem temporal, subtipos ou qualidade biológica.
+Não foi realizada busca de hiperparâmetros; parâmetros são pré-definidos.
+Sem inferência causal, superioridade estatística, validade clínica ou generalização externa.

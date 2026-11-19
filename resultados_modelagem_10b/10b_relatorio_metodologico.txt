@@ -1,0 +1,33 @@
+ETAPA 10B | TCGA-PAAD | ESTABILIDADE E CONTRIBUIÇÃO INCREMENTAL
+
+ANÁLISE DESCRITIVA DE DOBRAS DEPENDENTES
+
+         modelo  n_dobras    media       dp  mediana   minimo   maximo
+        clinico         6 0.550866 0.035477 0.566416 0.493333 0.586207
+      integrado         6 0.538341 0.033291 0.542032 0.491282 0.575318
+transcriptomico         6 0.486051 0.030700 0.485726 0.433757 0.524103
+
+DIFERENÇAS PAREADAS (MESMAS DOBRAS)
+
+                 comparacao  n_dobras_dependentes  delta_medio_descritivo  delta_mediano  delta_dp_descritivo  dobras_delta_positivo  dobras_delta_negativo  dobras_delta_zero
+        integrado - clinico                     6               -0.012525      -0.006470             0.023827                      1                      5                  0
+  transcriptomico - clinico                     6               -0.064815      -0.069915             0.061415                      1                      5                  0
+integrado - transcriptomico                     6                0.052290       0.044855             0.059079                      5                      1                  0
+
+ESTABILIDADE DE SELEÇÃO GÊNICA
+
+{
+  "disponivel": true,
+  "genes_distintos": 22,
+  "genes_presentes_em_todas_dobras": 18,
+  "jaccard_medio_descritivo": 0.9393939393939394,
+  "max_genes_por_dobra_observado": 20
+}
+
+LIMITAÇÕES
+As mesmas pessoas podem aparecer em testes de repetições diferentes.
+As dobras não são observações independentes: DP entre dobras não é IC 95%.
+Sem teste de significância, superioridade estatística ou validação externa.
+Seleção por variância não implica relevância biológica ou causal.
+Comparações de sensibilidade são exploratórias e não constituem otimização de hiperparâmetros.
+Revisar temporalidade, censura, origem dos dados, lote e qualidade biológica antes de conclusões.

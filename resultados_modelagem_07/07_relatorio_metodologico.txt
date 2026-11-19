@@ -1,0 +1,26 @@
+SCRIPT 07 | TCGA-PAAD | RELATORIO EXPLORATORIO
+Coorte original: 185 | elegiveis: 179 | eventos: 100 | censuras: 79
+Unidade de analise: paciente unico; desfecho: obito (1) vs censura (0).
+Tempo: days_to_death se falecido; days_to_last_follow_up se vivo.
+Covariaveis: idade (10 anos, centrada em 65) e estagios II / III-IV (referencia I).
+Validacao: RepeatedStratifiedKFold, 5 dobras x 3 repeticoes, seed 2027.
+Estratificacao por evento; todos os ajustes feitos apenas nos dados de treinamento.
+Cox sem penalizacao; Cox ridge penalizer=0.1; Cox elastic net penalizer=0.1, l1_ratio=0.5.
+Random Survival Forest: NAO executado: scikit-survival nao instalado.
+Metrica: C-index em cada dobra de teste; valores agregados sao DESCRITIVOS.
+Dobras repetidas sao dependentes; DP entre dobras nao e intervalo de confianca.
+Hiperparametros predefinidos, SEM busca ou selecao otimizada por CV aninhada.
+Nao foram estimados Brier Score, AUC dependente do tempo nem calibracao.
+Nao interpretar a ordenacao por media como superioridade estatistica.
+Nenhuma modalidade omica foi usada: somente tres covariaveis clinicas.
+Limitacoes: grupos III-IV pequenos; possivel instabilidade de estimativas.
+Auditar origem temporal, censura, codificacao de estadios 0/0a e vies de selecao.
+Resultados nao representam validacao externa, clinica, causal ou ferramenta assistencial.
+Modelos solicitados: Cox tradicional, Cox ridge (0.1), Cox elastic net (0.1)
+Falhas registradas: 0
+
+RESUMO:
+               modelo  n_dobras  media  desvio_padrao  mediana  minimo  maximo  n_dobras_esperadas  completo
+      Cox tradicional        15 0.5374         0.0389   0.5253  0.4862  0.6098                  15      True
+      Cox ridge (0.1)        15 0.5420         0.0383   0.5328  0.4834  0.6098                  15      True
+Cox elastic net (0.1)        15 0.5607         0.0447   0.5646  0.4890  0.6320                  15      True

@@ -1,0 +1,19 @@
+{
+  "pacientes_elegiveis": 172,
+  "eventos": 93,
+  "censuras": 79,
+  "genes_brutos": 60616,
+  "modelos": [
+    "clinico",
+    "transcriptomico",
+    "integrado"
+  ],
+  "dobras": 3,
+  "repeticoes": 2,
+  "max_genes_por_dobra": 20,
+  "penalizacao": 1.0,
+  "min_cpm": 1.0,
+  "fracao_minima": 0.2,
+  "seed": 2027,
+  "falhas": 0
+}
