@@ -1,0 +1,25 @@
+ETAPA 11 | INTERPRETABILIDADE EXPLORATORIA COX | TCGA-PAAD
+
+{
+  "etapa": "11",
+  "status": "concluida",
+  "pacientes_elegiveis": 172,
+  "dobras_previstas": 6,
+  "modelos": 3,
+  "ajustes_concluidos": 18,
+  "falhas": 0,
+  "genes_distintos": 22,
+  "metodo": "coeficiente Cox x (covariavel - media treino); decomposicao exata do log-risco",
+  "nota": "nao e SHAP; nao representa efeito causal ou biomarcador validado"
+}
+
+MODELOS: os mesmos splits, selecao de genes por variancia no treino e penalizacao da etapa 10.
+Contribuicoes: beta_j * (x_j - media_treino_j). A soma reproduz o log-risco previsto pelo lifelines.
+Valores de genes sao log2(CPM+1) padronizados por parametros do treino; idade em anos, estagios dummies.
+Hazard ratios nao sao comparaveis diretamente entre genes padronizados e idade em anos.
+Contribuicoes absolutas medias sao descritivas e dependem da distribuicao das covariaveis.
+A selecao por variancia nao prova associacao prognostica nem relevancia biologica.
+As dobras repetidas sao dependentes; frequencias e desvios nao constituem IC independentes.
+Identificadores Ensembl mantidos sem anotacao externa nao verificada.
+Nao houve analise de vias, SHAP, validacao externa, inferencia causal ou validacao clinica.
+Revisar lote, pureza tumoral, qualidade, censura e origem temporal antes de interpretacao biologica.

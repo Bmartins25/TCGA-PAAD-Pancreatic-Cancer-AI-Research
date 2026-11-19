@@ -1,0 +1,12 @@
+{
+  "etapa": "11",
+  "status": "concluida",
+  "pacientes_elegiveis": 172,
+  "dobras_previstas": 6,
+  "modelos": 3,
+  "ajustes_concluidos": 18,
+  "falhas": 0,
+  "genes_distintos": 22,
+  "metodo": "coeficiente Cox x (covariavel - media treino); decomposicao exata do log-risco",
+  "nota": "nao e SHAP; nao representa efeito causal ou biomarcador validado"
+}
