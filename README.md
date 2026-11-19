@@ -1,108 +1,197 @@
 # TCGA-PAAD | Pancreatic Cancer AI Research
 
-**Estudo piloto de análise clínica, sobrevida e inteligência artificial explicável em câncer de pâncreas**
+**Estudo piloto de análise clínica, sobrevida e inteligência artificial interpretável em câncer de pâncreas**
 
-![Status](https://img.shields.io/badge/status-estudo%20explorat%C3%B3rio-2563eb) ![Dataset](https://img.shields.io/badge/dados-TCGA--PAAD-0f766e) ![Python](https://img.shields.io/badge/linguagem-Python-3776ab) ![Área](https://img.shields.io/badge/%C3%A1rea-oncologia%20computacional-64748b)
+![Status](https://img.shields.io/badge/status-pipeline%20explorat%C3%B3rio%20conclu%C3%ADdo-0f766e) ![Dataset](https://img.shields.io/badge/dados-TCGA--PAAD-2563eb) ![Python](https://img.shields.io/badge/linguagem-Python-3776ab) ![Validação](https://img.shields.io/badge/valida%C3%A7%C3%A3o-externa%20pendente-d97706)
 
-> **Escopo científico:** repositório de um estudo piloto computacional com dados secundários públicos do projeto TCGA-PAAD, obtidos pelo Genomic Data Commons (GDC). Os resultados são preliminares e não constituem ferramenta clínica, validação de IA ou evidência causal.
+> **Escopo científico:** estudo computacional retrospectivo e exploratório com dados secundários do TCGA-PAAD, acessados por meio do Genomic Data Commons (GDC). O pipeline de exploração, integração, modelagem, interpretabilidade, robustez e consolidação documental foi executado. **Não se trata de modelo clinicamente validado, biomarcador validado ou evidência causal.** A auditoria global de integridade SHA-256 (13B) permanece pendente.
 
 ## Visão geral
 
-O projeto investiga características clínicas e desfechos de pacientes com câncer de pâncreas, estabelecendo uma base metodológica para pesquisas futuras sobre integração de dados clínicos e multiômicos e modelos interpretáveis de inteligência artificial.
+O projeto investiga dados clínicos e de expressão gênica (RNA-seq) em adenocarcinoma pancreático, com foco na predição exploratória de sobrevida global e na comparação de modelos clínico, transcriptômico e integrado. Constitui uma base metodológica para pesquisas futuras em inteligência artificial explicável e integração multiômica.
 
-**Objetivos do piloto:**
+## Objetivos
 
-- Auditar, consolidar e caracterizar registros clínicos do TCGA-PAAD.
-- Descrever idade ao diagnóstico, estadiamento patológico, situação vital e completude dos dados.
-- Estimar a sobrevida global por Kaplan–Meier, respeitando eventos e censuras.
-- Explorar associações entre características clínicas e risco de óbito por regressão de Cox.
-- Examinar pressupostos, qualidade dos dados e sensibilidade das estimativas antes de etapas preditivas.
+- Organizar e auditar registros clínicos e arquivos de RNA-seq do TCGA-PAAD.
+- Caracterizar idade, estágio, situação vital, tempos de seguimento e censura.
+- Explorar curvas de Kaplan–Meier e regressão de riscos proporcionais de Cox, com diagnósticos e análises de sensibilidade.
+- Realizar controle de qualidade de expressão, pareamento por paciente e integração clínica–transcriptômica.
+- Comparar modelos de sobrevida clínico, transcriptômico e integrado sob validação cruzada repetida.
+- Descrever contribuições de covariáveis e estabilidade da seleção gênica, sem atribuir causalidade.
+- Consolidar resultados e documentar limitações e pendências de reprodutibilidade.
 
-## Fonte dos dados e população
+## Fonte dos dados e desenho
 
 | Item | Descrição |
 |:--|:--|
 | Programa | The Cancer Genome Atlas (TCGA) |
 | Projeto | TCGA-PAAD — Pancreatic Adenocarcinoma |
 | Portal | [NCI Genomic Data Commons](https://portal.gdc.cancer.gov/projects/TCGA-PAAD) |
-| Modalidades do piloto | Dados clínicos e exploração inicial de RNA-seq |
-| Unidade de análise clínica | Paciente único após consolidação |
-| Tipo de estudo | Observacional retrospectivo, secundário e exploratório |
+| Modalidades analisadas | Dados clínicos e contagens de RNA-seq |
+| Desenho | Observacional retrospectivo, secundário e exploratório |
+| Unidade de pareamento | Identificador do paciente (não por data de coleta) |
+| Desfecho exploratório | Sobrevida global, com evento e censura conforme dados disponíveis |
+| Ambiente utilizado | Python 3.9; execução local em Windows/VS Code |
 
-### Caracterização preliminar da coorte clínica
+### População e rastreabilidade das amostras
 
-| Indicador | Resultado preliminar |
+| Marco do processamento | Pacientes |
 |:--|--:|
-| Pacientes únicos | **185** |
-| Idade média ao diagnóstico | **65,42 anos** |
-| Idade mediana ao diagnóstico | **65,83 anos** |
-| Falecidos na situação vital registrada | **100** |
-| Vivos na situação vital registrada | **85** |
-| Estágio patológico ausente | **3 (1,6%)** |
+| Coorte clínica consolidada | **185** |
+| Pacientes com matriz RNA-seq na integração | **178** |
+| Pacientes pareados com desfecho válido | **177** |
+| Pacientes elegíveis para a modelagem final | **172** |
 
-*Os números acima se referem à consolidação exploratória informada na execução local; não devem ser interpretados como estatísticas definitivas do projeto TCGA-PAAD. É necessário confirmar a origem dos tempos, os critérios de elegibilidade e a consistência entre arquivos antes de qualquer publicação científica.*
+A redução entre etapas decorre dos critérios e disponibilidades específicos de cada análise; esses totais **não devem ser confundidos**. Na caracterização clínica preliminar, registraram-se idade média de 65,42 anos, mediana de 65,83 anos, 100 falecidos, 85 vivos e três registros sem estágio patológico. Esses indicadores exigem conferência de definições e proveniência antes de publicação.
 
-## Fluxo de análise
+## Fluxo analítico e situação das etapas
 
-| Etapa | Procedimento | Situação |
+| Etapa | Conteúdo | Situação documental |
 |:--|:--|:--|
-| 01 | Aquisição e organização dos arquivos clínicos e RNA-seq | Parcial; downloads com falhas de conexão |
-| 02 | Inspeção das tabelas clínicas e identificação de variáveis | Executada |
-| 03 | Consolidação de registros por paciente | Executada; requer auditoria |
+| 01 | Validação inicial e organização dos dados | Executada no piloto; aquisição e completude devem ser auditadas |
+| 02 | Exploração clínica | Executada |
+| 03 | Consolidação de pacientes | Executada |
 | 04 | Análise exploratória e visualizações | Executada |
-| 05 | Auditoria e estimativa exploratória de sobrevida global | Executada; requer verificações |
-| 06 | Regressão de Cox e comparação de grupos de estágio | Exploratória |
-| 06B | Diagnóstico de pressupostos e análises de sensibilidade | Em avaliação |
-| 07 | Modelos preditivos e explicabilidade | Planejada |
+| 05 | Sobrevida global, Kaplan–Meier e censura | Executada em caráter exploratório |
+| 06 | Regressão de Cox | Executada em caráter exploratório |
+| 06B | Diagnósticos de Cox | Executada; pressupostos requerem revisão científica |
+| 06C | Validação formal exploratória de Cox | Executada; não equivale a validação externa |
+| 07 | Modelagem inicial de sobrevida | Executada |
+| 08 | Validação e métricas por dobra | Executada; registros preservados |
+| 09 / 09B | Mapeamento e processamento de RNA-seq | Executadas |
+| 09C | Controle de qualidade e exploração da expressão | Executada |
+| 09D | Auditoria de integração clínica–transcriptômica | Executada; exportação de matriz bruta documentada |
+| 10 | Comparação dos três modelos em seis dobras | Executada |
+| 10B | Diferenças pareadas e estabilidade de genes | Executada; análise descritiva |
+| 11 | Interpretabilidade por decomposição do log-risco | Executada; não é SHAP |
+| 12 | Robustez descritiva e subgrupos | Executada; não é teste de superioridade |
+| 13 | Consolidação e auditoria documental | Executada: 14 verificações, zero alertas no escopo examinado |
+| 13B | Auditoria global de integridade SHA-256 | **Não concluída**; interrompida durante leitura de arquivos |
+| 14 | Relatório científico documental | Executada; pendências inicialmente identificadas |
+| 14B | Recuperação de métricas auditadas da etapa 13 | Executada |
+| 14C | Conferência do CSV da etapa 10 contra a etapa 13 | **Executada: 3/3 modelos, diferenças zero, 0 alertas documentais** |
 
-## Sobrevida e modelagem estatística
+> Os estados acima descrevem as execuções e saídas observadas no piloto local. Não substituem uma revisão independente de código, entradas, critérios de elegibilidade e integridade de todos os arquivos.
 
-A análise de sobrevida utiliza o estimador de **Kaplan–Meier**. A regressão de **riscos proporcionais de Cox** é empregada apenas para investigar associações exploratórias. O conjunto elegível e a definição de tempo/evento devem ser documentados em cada análise; não se deve equiparar automaticamente situação vital à disponibilidade de tempo válido para sobrevida.
+## Processamento transcriptômico
 
-**Verificações metodológicas prioritárias:**
+- Inspeção da profundidade das bibliotecas e da complexidade observada por amostra.
+- Matriz inicial com **60.616 genes/identificadores**; filtragem exploratória reteve **18.551** e removeu **42.065**.
+- Visualização da distribuição após transformação `log2(CPM + 1)` e análise de componentes principais (PCA) para controle de qualidade.
+- Pareamento entre dados clínicos e expressão por identificador de paciente.
+- A matriz bruta exportada na etapa 09D é destinada à integração auditável. Transformações e seleção de variáveis para predição devem ser ajustadas **somente nos dados de treino de cada dobra**, evitando vazamento de informação.
 
-- Coerência entre datas, tempos de acompanhamento, óbitos e censuras.
-- Revisão de tempos nulos, negativos ou inconsistentes.
-- Diagnóstico da hipótese de riscos proporcionais (resíduos de Schoenfeld).
-- Avaliação da forma funcional de covariáveis contínuas e análises de sensibilidade.
-- Controle de duplicidades e rastreabilidade das transformações.
-- Interpretação cautelosa diante de grupos pequenos e intervalos de confiança amplos.
+A PCA exploratória foi ajustada na coorte para controle de qualidade e **não** deve ser reutilizada como transformação pré-ajustada na validação preditiva.
 
-## Estrutura proposta do repositório
+## Modelagem e validação
+
+Foram comparados três conjuntos de covariáveis: **clínico**, **transcriptômico** e **integrado**. A modelagem exploratória utilizou seis dobras registradas, com preparação de atributos e seleção gênica dentro do treino, conforme descrito nas saídas das etapas 10–12. A seleção por variância não comprova relevância biológica.
+
+### Desempenho discriminativo
+
+| Modelo | C-index médio | DP descritivo entre dobras | Mediana |
+|:--|--:|--:|--:|
+| Clínico | **0,550866** | 0,035477 | 0,566416 |
+| Integrado | **0,538341** | 0,033291 | 0,542032 |
+| Transcriptômico | **0,486051** | 0,030700 | 0,485726 |
+
+*Os C-index médios foram conferidos entre `resultados_modelagem_10/10_resumo_modelos.csv` e `resultados_robustez_12/resultados_consolidacao_13/13_resumo.json` na etapa 14C: três correspondências, diferenças exibidas de 0,000000 e nenhum alerta documental remanescente.*
+
+### Comparações pareadas descritivas
+
+| Comparação | Δ médio de C-index | Dobras com Δ positivo | Dobras com Δ negativo |
+|:--|--:|--:|--:|
+| Integrado − clínico | −0,012525 | 1 | 5 |
+| Integrado − transcriptômico | +0,052290 | 5 | 1 |
+| Transcriptômico − clínico | −0,064815 | 1 | 5 |
+
+O modelo clínico apresentou a maior discriminação média **neste experimento**. Não há demonstração de superioridade estatística, benefício clínico ou generalização externa. As dobras de validação cruzada repetida não são observações independentes; os desvios-padrão apresentados são descritivos, não intervalos de confiança.
+
+## Interpretabilidade e estabilidade de atributos
+
+A etapa 11 utilizou decomposição exata do preditor linear do modelo de Cox, calculando contribuições do tipo `β × (x − média do treino)` para o log-risco. **Não foi utilizado SHAP**. Os resultados descrevem a influência matemática das covariáveis no modelo ajustado, sem estabelecer efeito causal ou biomarcador validado.
+
+Na avaliação exploratória de estabilidade gênica da etapa 10B, foram observados **22 genes distintos**, dos quais **18 apareceram em todas as seis dobras**; o índice de Jaccard médio descritivo foi aproximadamente **0,9394**. Identificadores Ensembl foram mantidos sem anotação biológica externa verificada.
+
+## Robustez e subgrupos
+
+A etapa 12 examinou discriminação por dobra, diferenças pareadas e subgrupos de idade e estágio. As análises estratificadas por evento isolado não produziram C-index calculável; estratos com poucos eventos ou amostras não sustentam conclusões robustas. A ausência de controle completo para lote, pureza tumoral, origem temporal e qualidade biológica limita a interpretação.
+
+## Consolidação e auditoria documental
+
+- **Etapa 13:** 12 arquivos inventariados no diretório examinado, 14 verificações documentais e zero alertas.
+- **Etapa 14:** inventário documental mais amplo de 83 arquivos; cinco pendências iniciais de localização/extração.
+- **Etapa 14B:** C-index recuperados do resumo auditado da etapa 13, com backup do relatório.
+- **Etapa 14C:** leitura do resumo CSV da etapa 10, confronto com a etapa 13 e atualização do relatório; **zero alertas restantes no escopo da consolidação documental**.
+- **Etapa 13B:** a tentativa de hash global foi interrompida (`KeyboardInterrupt`); **não há certificação global de integridade SHA-256**.
+
+A ausência de alertas na etapa 14C **não** significa ausência de limitações metodológicas nem conclusão da auditoria global 13B.
+
+## Organização sugerida do repositório
 
 ```text
 TCGA-PAAD-Pancreatic-Cancer-AI-Research/
 ├── README.md
 ├── .gitignore
-├── scripts/
+├── requirements.txt                 # gerar a partir do ambiente revisado
+├── scripts/                         # scripts efetivamente versionados
+│   ├── 01_validacao_dados.py
 │   ├── 02_exploracao_clinica.py
-│   ├── 03_consolidacao_clinica.py
-│   ├── 04_analise_exploratoria.py
-│   ├── 05_analise_sobrevida.py
-│   ├── 06_regressao_cox.py
-│   └── 06b_diagnostico_cox.py
-├── figures/
-├── results/
-└── docs/
+│   ├── 03_consolidacao_pacientes.py
+│   ├── ...                           # etapas intermediárias 04–12
+│   ├── 13_consolidacao_cientifica_auditoria.py
+│   ├── 13b_auditoria_global.py
+│   ├── 14_relatorio_cientifico_final.py
+│   ├── 14b_corrigir_consolidacao.py
+│   └── 14c_verificacao_final_modelagem.py
+├── figures/                         # figuras revisadas para publicação
+├── results/                         # tabelas e resumos sem dados restritos
+│   ├── modelagem_10/
+│   ├── robustez_12/
+│   ├── consolidacao_13/
+│   └── relatorio_14/
+└── docs/                            # protocolo, dicionário e limitações
 ```
 
-*A estrutura é sugerida; os nomes dos arquivos devem ser ajustados aos scripts efetivamente versionados. Não inclua dados brutos, credenciais ou arquivos de acesso restrito sem revisar as condições de uso.*
+**Nota:** esta árvore é uma **proposta de organização para o GitHub**, não uma representação literal dos diretórios locais. Os arquivos intermediários devem ser incluídos com seus nomes reais após conferência. Não renomeie scripts sem ajustar caminhos e dependências.
+
+### Arquivos de evidência da conferência final
+
+```text
+resultados_modelagem_10/10_resumo_modelos.csv
+resultados_robustez_12/12_resumo.json
+resultados_robustez_12/resultados_consolidacao_13/13_resumo.json
+resultados_relatorio_14/14_resumo.json
+resultados_relatorio_14/14_metricas.csv
+```
 
 ## Reprodutibilidade e integridade científica
 
-O repositório deve registrar versões de Python e dependências, comandos de execução, origem dos arquivos e decisões de limpeza e exclusão. Resultados numéricos devem ser recalculados a partir dos dados de entrada e comparados com as tabelas e figuras antes de serem considerados finais.
+Para uma reprodução independente, ainda é necessário publicar um ambiente de dependências validado, documentar versões de dados/arquivos GDC e manifestos, explicitar critérios de inclusão e exclusão, disponibilizar comandos de execução e revisar a integridade das entradas. A execução local utilizou Python 3.9, mas a simples indicação da versão não garante reprodutibilidade.
 
-**Atenção:** o GDC pode impor regras específicas para acesso e redistribuição de determinados arquivos. Verifique as condições de cada modalidade e evite publicar dados individuais desnecessários.
+**Boas práticas de compartilhamento:** não publicar credenciais, tokens, dados individuais sensíveis ou arquivos sujeitos a restrições de redistribuição; revisar os termos do GDC e preferir scripts, metadados permitidos e saídas agregadas. Evitar caminhos absolutos com nomes de usuários em arquivos públicos.
 
-## Limitações
+## Limitações e próximos passos científicos
 
-Este piloto não estabelece capacidade de diagnóstico, predição clínica validada ou causalidade. A representatividade da coorte, a completude do seguimento, a qualidade da codificação de estágios, o pareamento entre modalidades e a validade dos pressupostos estatísticos exigem avaliação adicional. A etapa de inteligência artificial explicável permanece como perspectiva de pesquisa.
+1. Auditoria global 13B de integridade ainda não concluída.
+2. Ausência de validação externa e de avaliação prospectiva.
+3. Necessidade de revisar temporalidade, definição do desfecho, censura e elegibilidade.
+4. Falta de harmonização completa de lote, pureza tumoral e potenciais confundidores.
+5. Falta de anotação e validação biológica independente dos genes selecionados.
+6. Desempenho discriminativo modesto e ausência de teste conclusivo de superioridade entre modelos.
+7. Ausência de demonstração de utilidade clínica, causalidade ou transportabilidade.
+8. Para estudos futuros: avaliação de calibração, métricas dependentes do tempo, validação externa e integração de outras modalidades quando houver pareamento e qualidade adequados.
+
+## Ética e uso responsável
+
+Este piloto emprega dados secundários para pesquisa metodológica. Nenhuma saída deve ser usada para orientar diagnóstico ou tratamento. O uso e a redistribuição dos arquivos devem observar as regras aplicáveis do GDC, proteção de dados e práticas de pesquisa responsável.
 
 ## Referências e recursos
 
 - [National Cancer Institute — Genomic Data Commons](https://gdc.cancer.gov/)
-- [TCGA-PAAD no portal GDC](https://portal.gdc.cancer.gov/projects/TCGA-PAAD)
+- [Projeto TCGA-PAAD no GDC](https://portal.gdc.cancer.gov/projects/TCGA-PAAD)
 - [Documentação da API do GDC](https://docs.gdc.cancer.gov/API/Users_Guide/Getting_Started/)
+- [The Cancer Genome Atlas (TCGA)](https://www.cancer.gov/ccg/research/genome-sequencing/tcga)
 
 ## Autoria
 
@@ -112,4 +201,4 @@ Pesquisa acadêmica em ciência de dados, inteligência artificial e saúde.
 
 ---
 
-*Última atualização: novembro de 2026. Documentação de estudo piloto, sujeita a revisão metodológica.*
+*Última atualização: novembro de 2026. Pipeline exploratório documentado até a etapa 14C; auditoria global 13B e validação científica externa pendentes.*
