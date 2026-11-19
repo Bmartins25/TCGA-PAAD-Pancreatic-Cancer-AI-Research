@@ -1,0 +1,3 @@
+﻿modelo,n,eventos,parametros,log_verossimilhanca,AIC_parcial,concordancia_aparente,LRT_spline_vs_linear,p_LRT_spline_vs_linear
+Idade linear,179,100,3,-436.08076975438166,878.1615395087633,0.5514993481095176,,
+Idade spline cubica (df=4),179,100,6,-433.5229535604715,879.045907120943,0.5475880052151239,5.115632387820369,0.16352316456474753

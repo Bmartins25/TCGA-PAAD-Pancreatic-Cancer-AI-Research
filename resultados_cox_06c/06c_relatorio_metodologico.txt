@@ -1,0 +1,12 @@
+SCRIPT 06C | TCGA-PAAD | RELATORIO METODOLOGICO
+Coorte original: 185 | Elegíveis: 179 | Óbitos: 100 | Excluídos: 6
+Modelo: Cox sem penalização, empates Efron (lifelines), idade por 10 anos e estagios I/II/III-IV.
+PH: teste de residuos de Schoenfeld escalonados com transformacoes rank e km; testes individuais.
+IMPORTANTE: o script nao produz um teste GLOBAL formal de proporcionalidade; nao inferir validacao global.
+Splines: spline cubica df=4 versus idade linear; LRT exploratorio (3 graus de liberdade).
+Influencia: delta-beta aproximado; ranking nao autoriza exclusoes automaticas.
+Concordancia e AIC sao aparentes (mesma coorte); nao demonstram desempenho externo.
+Nao foram auditados origem do tempo, adequacao da censura, harmonizacao de estagios e vies de selecao.
+Resultados nao equivalem a validacao clinica, causal, preditiva externa ou ferramenta assistencial.
+Possivel instabilidade: grupo III-IV pequeno. Revisar codificacao Stage 0/0a e exclusoes.
+Erros em componentes: nenhum

@@ -1,0 +1,7 @@
+Coorte original: 185; elegíveis: 179; eventos: 100; excluídos: 6.
+Método: PHReg, empates Efron; mesma codificação do Script 06.
+Schoenfeld: tendência linear dos resíduos não escalonados contra log1p(tempo), triagem exploratória.
+NÃO é teste formal de Grambsch-Therneau. P-valores não são prova de proporcionalidade.
+Martingale: inspeção LOWESS; não é teste formal de linearidade.
+Sensibilidade: diferentes agrupamentos de estágios; grupos pequenos e confusão residual limitam conclusões.
+Revisar codificação clínica, origem temporal, censura e pressupostos antes de inferência definitiva.

@@ -1,0 +1,26 @@
+TCGA-PAAD | REGRESSAO DE COX EXPLORATORIA
+
+Origem: pacientes_tcga_paad_exploratorio.csv
+Pacientes originais: 185
+Incluidos: 179; obitos: 100; excluidos: 6
+
+Desfecho: obito (1) ou censura (0); tempos: dias ate obito para falecidos, dias ate ultimo acompanhamento para vivos.
+Tempo zero assumido conforme campos GDC; validar definicoes temporais na fonte.
+Idade: por 10 anos; estagio I como referencia; estagio II; estagio III-IV.
+Estimacao: PHReg (statsmodels), empates Efron, IC Wald 95%.
+ATENCAO: hipotese de riscos proporcionais NAO testada neste script.
+Grupos pequenos podem produzir IC amplos/instabilidade; resultados exploratorios.
+Nao realizar inferencia causal nem afirmar validacao externa ou performance preditiva.
+
+Contagens:
+               pacientes  obitos
+grupo_estagio                   
+I                     20       7
+II                   150      88
+III-IV                 9       5
+
+Resultados:
+           variavel     beta  erro_padrao       HR  IC95_inferior  IC95_superior  p_valor
+Idade (por 10 anos) 0.215525     0.100039 1.240514       1.019640       1.509232 0.031207
+    Estágio II vs I 0.700788     0.396085 2.015341       0.927245       4.380288 0.076846
+Estágio III–IV vs I 0.544063     0.593051 1.722993       0.538851       5.509326 0.358935
