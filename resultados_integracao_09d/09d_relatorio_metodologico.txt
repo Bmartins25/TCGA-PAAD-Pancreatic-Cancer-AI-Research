@@ -1,0 +1,20 @@
+ETAPA 09D | TCGA-PAAD | AUDITORIA DE INTEGRAÇÃO
+
+etapa: 09D
+status: integração auditada; não equivale a validação biológica ou preditiva
+pacientes_clinicos: 185
+pacientes_mapa_09b: 178
+pacientes_matriz_09b: 178
+pacientes_pareados: 178
+pacientes_pareados_desfecho_valido: 177
+genes_matriz_bruta: 60616
+matriz_exportada: True
+nota: 09C foi exploratória. Para validação preditiva, refazer filtragem/normalização/seleção somente no treino de cada dobra.
+fontes: {'clinico': 'C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\pacientes_tcga_paad_exploratorio.csv', 'mapa': 'C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_rnaseq_09b\\09b_pacientes_amostras_validos.csv', 'contagens': 'C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_rnaseq_09b\\09b_matriz_contagens_brutas.csv.gz', 'qc': 'C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_rnaseq_09c\\09c_qc_amostras.csv'}
+
+LIMITAÇÕES
+O pareamento é por identificador de paciente, não por data de coleta.
+Não há imputação, seleção automática de amostras, harmonização de lote ou modelagem.
+Tempo de sobrevida é derivado de dias até morte (óbito) ou último seguimento (vivo).
+Revisar origem temporal, definição do endpoint, qualidade de RNA e metadados técnicos.
+Não utilizar a matriz filtrada/logCPM/PCA da 09C como entrada direta de validação cruzada.

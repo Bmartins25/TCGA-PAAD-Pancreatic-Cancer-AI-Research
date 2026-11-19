@@ -1,0 +1,14 @@
+﻿indicador,valor
+pacientes_unicos,185.0
+idade_media_anos,65.42
+idade_mediana_anos,65.83
+idade_minima_anos,20.31
+idade_maxima_anos,87.92
+falecidos,100.0
+vivos,85.0
+situacao_vital_nao_informada,0.0
+ausentes_diagnoses_age_at_diagnosis,0.0
+ausentes_diagnoses_ajcc_pathologic_stage,3.0
+ausentes_demographic_vital_status,0.0
+ausentes_demographic_days_to_death,85.0
+ausentes_diagnoses_days_to_last_follow_up,25.0

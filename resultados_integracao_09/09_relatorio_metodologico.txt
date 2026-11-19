@@ -1,0 +1,16 @@
+ETAPA 09 — TCGA-PAAD | AUDITORIA DE METADADOS RNA-SEQ
+pacientes_clinicos: 185
+arquivos_manifesto: 179
+arquivos_com_metadados: 179
+pacientes_com_rna_tumor_primario: 178
+pacientes_sem_rna_tumor_primario: 7
+pacientes_com_multiplos_arquivos_ou_amostras: 0
+status: auditoria de metadados; expressão gênica ainda não integrada
+
+CRITÉRIOS: identificador de paciente TCGA do GDC; amostra Primary Tumor.
+Arquivos múltiplos por paciente não são agregados automaticamente.
+O manifesto lista arquivos, não contém contagens gênicas nem vínculo paciente.
+Ainda NÃO foi construída matriz de expressão ou realizado controle de qualidade RNA-seq.
+Não assumir que metadados GDC garantem existência de arquivos baixados.
+Próxima fase: baixar arquivos STAR counts, conferir checksums, selecionar amostras,
+verificar tipo de quantificação, gene IDs, normalização e vazamento de informação.

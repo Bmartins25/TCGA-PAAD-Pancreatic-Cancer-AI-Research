@@ -1,0 +1,18 @@
+{
+  "etapa": "09D",
+  "status": "integração auditada; não equivale a validação biológica ou preditiva",
+  "pacientes_clinicos": 185,
+  "pacientes_mapa_09b": 178,
+  "pacientes_matriz_09b": 178,
+  "pacientes_pareados": 178,
+  "pacientes_pareados_desfecho_valido": 177,
+  "genes_matriz_bruta": 60616,
+  "matriz_exportada": true,
+  "nota": "09C foi exploratória. Para validação preditiva, refazer filtragem/normalização/seleção somente no treino de cada dobra.",
+  "fontes": {
+    "clinico": "C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\pacientes_tcga_paad_exploratorio.csv",
+    "mapa": "C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_rnaseq_09b\\09b_pacientes_amostras_validos.csv",
+    "contagens": "C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_rnaseq_09b\\09b_matriz_contagens_brutas.csv.gz",
+    "qc": "C:\\Users\\Bruno Bartolomeu\\Desktop\\Piloto Fiocruz - TCGA-PAAD\\resultados_rnaseq_09c\\09c_qc_amostras.csv"
+  }
+}
