@@ -129,7 +129,7 @@ A etapa 12 examinou discriminação por dobra, diferenças pareadas e subgrupos 
 
 A ausência de alertas na etapa 14C **não** significa ausência de limitações metodológicas nem conclusão da auditoria global 13B.
 
-## Organização sugerida do repositório
+## Organização do repositório
 
 ```text
 TCGA-PAAD-Pancreatic-Cancer-AI-Research/
