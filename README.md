@@ -1,6 +1,7 @@
 # TCGA-PAAD | Pancreatic Cancer AI Research
 
 **Estudo piloto de análise clínica, sobrevida e inteligência artificial interpretável em câncer de pâncreas**
+Orientação: Prof. Jerônimo Ruiz - Instituto René Rachou - Fiocruz Minas
 
 ![Status](https://img.shields.io/badge/status-pipeline%20explorat%C3%B3rio%20conclu%C3%ADdo-0f766e) ![Dataset](https://img.shields.io/badge/dados-TCGA--PAAD-2563eb) ![Python](https://img.shields.io/badge/linguagem-Python-3776ab) ![Validação](https://img.shields.io/badge/valida%C3%A7%C3%A3o-externa%20pendente-d97706)
 
